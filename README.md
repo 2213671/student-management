@@ -10,7 +10,7 @@ Dự án được thực hiện trong khuôn khổ môn học Advanced Software 
 
 ##  Thông tin nhóm
 
-- Thành viên 1: Huỳnh Minh Trọng - 2213671
+- Thành viên: Huỳnh Minh Trọng - 2213671
 
 ---
 
@@ -115,37 +115,37 @@ docker run -p 8080:8080 student-management
 ##  Kết quả thực hiện theo từng Lab
 
 ###  Lab 1: Khởi tạo & Kiến trúc
-- [x] Tạo project Spring Boot
-- [x] Cấu hình SQLite
-- [x] Tạo Entity Student (id dạng String)
-- [x] Thêm dữ liệu mẫu với DB Browser
+- Tạo project Spring Boot
+- Cấu hình SQLite
+- Tạo Entity Student (id dạng String)
+- Thêm dữ liệu mẫu với DB Browser
 
 ###  Lab 2: Xây dựng REST API
-- [x] Tạo Repository, Service, Controller
-- [x] API GET `/api/students` - danh sách
-- [x] API GET `/api/students/{id}` - chi tiết
+- Tạo Repository, Service, Controller
+- API GET `/api/students` - danh sách
+- API GET `/api/students/{id}` - chi tiết
 
 ###  Lab 3: Frontend với Thymeleaf
-- [x] Thêm Thymeleaf dependency
-- [x] Tạo StudentWebController (`@Controller`)
-- [x] Tạo view `students.html`
-- [x] Form tìm kiếm theo tên
-- [x] Tô màu đỏ sinh viên dưới 18 tuổi
+- Thêm Thymeleaf dependency
+- Tạo StudentWebController (`@Controller`)
+- Tạo view `students.html`
+- Form tìm kiếm theo tên
+- Tô màu đỏ sinh viên dưới 18 tuổi
 
 ###  Lab 4: Hoàn thiện CRUD & PostgreSQL
-- [x] Chuyển từ SQLite sang PostgreSQL
-- [x] Trang danh sách: bảng, tìm kiếm, nút "Thêm Mới", "Xem Chi Tiết"
-- [x] Trang chi tiết: hiển thị đủ thông tin, nút "Chỉnh Sửa", "Xóa" (có confirm)
-- [x] Thêm mới: form nhập liệu
-- [x] Chỉnh sửa: form điền sẵn thông tin
-- [x] Xóa: confirm dialog và redirect
+- Chuyển từ SQLite sang PostgreSQL
+- Trang danh sách: bảng, tìm kiếm, nút "Thêm Mới", "Xem Chi Tiết"
+- Trang chi tiết: hiển thị đủ thông tin, nút "Chỉnh Sửa", "Xóa" (có confirm)
+- Thêm mới: form nhập liệu
+- Chỉnh sửa: form điền sẵn thông tin
+- Xóa: confirm dialog và redirect
 
 ###  Lab 5: Docker & Deployment
-- [x] Tạo Dockerfile (multi-stage build)
-- [x] Cấu hình biến môi trường
-- [x] Tạo database trên Neon.tech
-- [x] Deploy lên Render.com
-- [x] Ứng dụng hoạt động public: [https://student-management-qk9w.onrender.com/students](https://student-management-qk9w.onrender.com/students)
+- Tạo Dockerfile (multi-stage build)
+- Cấu hình biến môi trường
+- Tạo database trên Neon.tech
+- Deploy lên Render.com
+- Ứng dụng hoạt động public: [https://student-management-qk9w.onrender.com/students](https://student-management-qk9w.onrender.com/students)
 
  Screenshots (Lab 4)
 Trang danh sách (/students)
