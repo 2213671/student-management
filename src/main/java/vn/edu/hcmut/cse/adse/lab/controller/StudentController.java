@@ -22,7 +22,7 @@ public class StudentController {
     
     // API lấy chi tiết: GET http://localhost:8080/api/students/{id}
     @GetMapping("/{id}")
-    public Student getStudentById(@PathVariable Integer id) {
+    public Student getStudentById(@PathVariable String id) {
         return service.getById(id);
     }
 }
