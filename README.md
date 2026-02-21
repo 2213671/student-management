@@ -1,6 +1,6 @@
 # Student Management System
 
-## 📚 Giới thiệu
+## Giới thiệu
 
 Đây là ứng dụng quản lý sinh viên được xây dựng bằng Java Spring Boot theo kiến trúc Layered Architecture. Ứng dụng cung cấp đầy đủ các chức năng CRUD (Thêm, Sửa, Xóa, Xem) cho thông tin sinh viên, bao gồm REST API và giao diện người dùng với Server-Side Rendering (Thymeleaf).
 
@@ -8,13 +8,13 @@ Dự án được thực hiện trong khuôn khổ môn học Advanced Software 
 
 ---
 
-## 👥 Thông tin nhóm
+##  Thông tin nhóm
 
 - Thành viên 1: Huỳnh Minh Trọng - 2213671
 
 ---
 
-## 🌐 Thông tin triển khai (Lab 5)
+##  Thông tin triển khai (Lab 5)
 
 - Public URL (Trang chính): https://student-management-qk9w.onrender.com/students
 - Platform (PaaS): Render.com
@@ -23,7 +23,7 @@ Dự án được thực hiện trong khuôn khổ môn học Advanced Software 
 
 ---
 
-## 🛠️ Công nghệ sử dụng
+##  Công nghệ sử dụng
 
 - Java 17 / 21
 - Spring Boot 3.x
@@ -37,7 +37,7 @@ Dự án được thực hiện trong khuôn khổ môn học Advanced Software 
 
 ---
 
-## 📁 Cấu trúc thư mục (Layered Architecture)
+##  Cấu trúc thư mục (Layered Architecture)
 ```
 student-management/
 ├── src/main/java/vn/edu/hcmut/cse/adse/lab/
@@ -61,7 +61,7 @@ student-management/
 └── README.md
 ```
 
-## 🚀 Hướng dẫn chạy dự án
+##  Hướng dẫn chạy dự án
 
 ### Yêu cầu hệ thống
 
@@ -107,62 +107,47 @@ docker build -t student-management .
 docker run -p 8080:8080 student-management
 ```
 ### 4. Truy cập ứng dụng
-- **Giao diện người dùng**: http://localhost:8080/students
-- **REST API**: http://localhost:8080/api/students
+- **Giao diện người dùng**: [`http://localhost:8080/students`](http://localhost:8080/students)
+- **REST API**: [`http://localhost:8080/api/students`](http://localhost:8080/api/students)
 
-✅ Kết quả thực hiện theo từng Lab
-Lab 1: Khởi tạo & Kiến trúc
-Tạo project Spring Boot
+---
 
-Cấu hình SQLite
+##  Kết quả thực hiện theo từng Lab
 
-Tạo Entity Student (id dạng String)
+###  Lab 1: Khởi tạo & Kiến trúc
+- [x] Tạo project Spring Boot
+- [x] Cấu hình SQLite
+- [x] Tạo Entity Student (id dạng String)
+- [x] Thêm dữ liệu mẫu với DB Browser
 
-Thêm dữ liệu mẫu với DB Browser
+###  Lab 2: Xây dựng REST API
+- [x] Tạo Repository, Service, Controller
+- [x] API GET `/api/students` - danh sách
+- [x] API GET `/api/students/{id}` - chi tiết
 
-Lab 2: Xây dựng REST API
-Tạo Repository, Service, Controller
+###  Lab 3: Frontend với Thymeleaf
+- [x] Thêm Thymeleaf dependency
+- [x] Tạo StudentWebController (`@Controller`)
+- [x] Tạo view `students.html`
+- [x] Form tìm kiếm theo tên
+- [x] Tô màu đỏ sinh viên dưới 18 tuổi
 
-API GET /api/students - danh sách
+###  Lab 4: Hoàn thiện CRUD & PostgreSQL
+- [x] Chuyển từ SQLite sang PostgreSQL
+- [x] Trang danh sách: bảng, tìm kiếm, nút "Thêm Mới", "Xem Chi Tiết"
+- [x] Trang chi tiết: hiển thị đủ thông tin, nút "Chỉnh Sửa", "Xóa" (có confirm)
+- [x] Thêm mới: form nhập liệu
+- [x] Chỉnh sửa: form điền sẵn thông tin
+- [x] Xóa: confirm dialog và redirect
 
-API GET /api/students/{id} - chi tiết
+###  Lab 5: Docker & Deployment
+- [x] Tạo Dockerfile (multi-stage build)
+- [x] Cấu hình biến môi trường
+- [x] Tạo database trên Neon.tech
+- [x] Deploy lên Render.com
+- [x] Ứng dụng hoạt động public: [https://student-management-qk9w.onrender.com/students](https://student-management-qk9w.onrender.com/students)
 
-Lab 3: Frontend với Thymeleaf
-Thêm Thymeleaf dependency
-
-Tạo StudentWebController (@Controller)
-
-Tạo view students.html
-
-Form tìm kiếm theo tên
-
-Tô màu đỏ sinh viên dưới 18 tuổi
-
-Lab 4: Hoàn thiện CRUD & PostgreSQL
-Chuyển từ SQLite sang PostgreSQL
-
-Trang danh sách: bảng, tìm kiếm, nút "Thêm Mới", "Xem Chi Tiết"
-
-Trang chi tiết: hiển thị đủ thông tin, nút "Chỉnh Sửa", "Xóa" (có confirm)
-
-Thêm mới: form nhập liệu
-
-Chỉnh sửa: form điền sẵn thông tin
-
-Xóa: confirm dialog và redirect
-
-Lab 5: Docker & Deployment
-Tạo Dockerfile (multi-stage build)
-
-Cấu hình biến môi trường
-
-Tạo database trên Neon.tech
-
-Deploy lên Render.com
-
-Ứng dụng hoạt động public: https://student-management-qk9w.onrender.com/students
-
-📸 Screenshots (Lab 4)
+ Screenshots (Lab 4)
 Trang danh sách (/students)
 ![alt text](image.png)
 
@@ -178,7 +163,7 @@ Trang chỉnh sửa (/students/edit/{id})
 Xác nhận xóa
 ![alt text](image-4.png)
 
-## ❓ Câu trả lời lý thuyết
+##  Câu trả lời lý thuyết
 
 ### Lab 1
 **1. Tại sao database chặn insert trùng ID?**
@@ -211,6 +196,4 @@ Model là cầu nối giữa Controller và View, chứa dữ liệu để hiể
 **3. Tại sao gọi là Server-Side Rendering (SSR)?**
 HTML được render hoàn chỉnh ở server với dữ liệu đã được điền sẵn, trả về cho trình duyệt hiển thị trực tiếp.
 
-📬 Thông tin liên hệ
-GitHub Repository: https://github.com/2213671/student-management
 ```
