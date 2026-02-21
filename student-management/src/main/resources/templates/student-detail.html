@@ -1,0 +1,97 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chi Tiet Sinh Vien</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      .detail-container {
+        border: 1px solid #ddd;
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .detail-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      .label {
+        font-weight: bold;
+        display: inline-block;
+        width: 80px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 3px;
+        margin-right: 10px;
+      }
+      .btn-edit {
+        background-color: #4caf50;
+        color: white;
+      }
+      .btn-delete {
+        background-color: #f44336;
+        color: white;
+      }
+      .btn-back {
+        background-color: #555;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chi Tiet Sinh Vien</h1>
+
+    <!-- Kiểm tra nếu có sinh viên -->
+    <div th:if="${student != null}">
+      <div class="detail-container">
+        <div class="detail-item">
+          <span class="label">ID:</span>
+          <span th:text="${student.id}">123</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Ho Ten:</span>
+          <span th:text="${student.name}">Nguyen Van A</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Email:</span>
+          <span th:text="${student.email}">email@example.com</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Tuoi:</span>
+          <span th:text="${student.age}">20</span>
+        </div>
+
+        <div style="margin-top: 20px">
+          <!-- Nút Chỉnh Sửa -->
+          <a th:href="@{'/students/edit/' + ${student.id}}" class="btn btn-edit"
+            >Chỉnh Sửa</a
+          >
+
+          <!-- Nút Xóa (có confirm dialog) -->
+          <a
+            th:href="@{'/students/delete/' + ${student.id}}"
+            class="btn btn-delete"
+            onclick="return confirm('Bạn có chắc muốn xóa?');"
+            >Xóa</a
+          >
+
+          <!-- Nút Quay Lại -->
+          <a href="/students" class="btn btn-back">Quay Lại</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trường hợp không tìm thấy -->
+    <div th:if="${student == null}">
+      <p>Không tìm thấy sinh viên!</p>
+      <a href="/students">Quay lại danh sách</a>
+    </div>
+  </body>
+</html>
