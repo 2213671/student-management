@@ -38,29 +38,28 @@ Dự án được thực hiện trong khuôn khổ môn học Advanced Software 
 ---
 
 ## 📁 Cấu trúc thư mục (Layered Architecture)
-
+```
 student-management/
-├── src/main/java/vn/edu/hcmut/cse/adse/lab/
-│ ├── controller/
-│ │ ├── StudentController.java (REST API)
-│ │ └── StudentWebController.java (SSR Web)
-│ ├── service/
-│ │ └── StudentService.java
-│ ├── repository/
-│ │ └── StudentRepository.java
-│ └── entity/
-│ └── Student.java
-├── src/main/resources/
-│ ├── application.properties
-│ └── templates/
-│ ├── students.html
-│ ├── student-detail.html
-│ └── student-form.html
-├── Dockerfile
-├── pom.xml
-└── README.md
-
-text
+  src/main/java/vn/edu/hcmut/cse/adse/lab/
+    controller/
+      StudentController.java (REST API)
+      StudentWebController.java (SSR Web)
+    service/
+      StudentService.java
+    repository/
+      StudentRepository.java
+    entity/
+      Student.java
+  src/main/resources/
+    application.properties
+    templates/
+      students.html
+      student-detail.html
+      student-form.html
+  Dockerfile
+  pom.xml
+  README.md
+```
 
 ---
 
@@ -78,34 +77,38 @@ text
 ```bash
 git clone https://github.com/2213671/student-management.git
 cd student-management
+```
 2. Cấu hình cơ sở dữ liệu
 a. Với PostgreSQL (Lab 4 & 5)
 Tạo database tên student_management
 
 Cập nhật thông tin trong application.properties:
 
-properties
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/student_management
 spring.datasource.username=postgres
 spring.datasource.password=your_password
+```
 b. Với SQLite (Lab 1-3)
 Không cần cài đặt, file student.db sẽ tự động tạo
 
 3. Chạy ứng dụng (các mode)
 Chạy trực tiếp với Maven
-bash
+```bash
 # Trên Linux/Mac
 ./mvnw spring-boot:run
 
 # Trên Windows (PowerShell)
 .\mvnw spring-boot:run
+```
 Chạy với Docker
-bash
+```bash
 # Build image
 docker build -t student-management .
 
 # Run container
 docker run -p 8080:8080 student-management
+```
 4. Truy cập ứng dụng
 Giao diện người dùng: http://localhost:8080/students
 
